@@ -1,0 +1,160 @@
+🚀 Local Deterministic Automation Engine — Roadmap
+✅ v1.0.0 — Core Runtime Stable
+Architecture
+
+Deterministic multi-step planner
+
+Plugin-driven execution registry
+
+Native Python filesystem execution
+
+Async agent (httpx)
+
+Parallel executor (ThreadPoolExecutor, 4 workers)
+
+Strict risk enforcement (Low / Medium / High)
+
+Distributed trace propagation (agent → executor)
+
+Strict idempotency (request_id)
+
+Execution replay by trace_id
+
+Step-level execution timeout (5s)
+
+Deterministic failure stop
+
+Plan versioning (1.0.0)
+
+🎯 System Guarantees
+
+No duplicate execution (idempotent)
+
+No hanging steps (timeout enforced)
+
+No cascading failures (deterministic stop)
+
+No dynamic tool execution (registry enforced)
+
+All executions traceable
+
+Planner behavior versioned
+
+🧠 Architectural Principles
+
+Determinism over heuristics
+
+Explicit governance over silent execution
+
+Plugin isolation over hardcoding
+
+Bounded execution over open-ended processing
+
+Replayability over hidden state
+
+📌 Current Limitations (Intentional)
+
+In-memory idempotency store (resets on restart)
+
+In-memory trace replay store
+
+No distributed clustering
+
+No persistent trace DB
+
+No retry or circuit breaker (by design)
+
+🛣 Future Phases
+Phase 11 — Persistence Layer
+
+Redis-backed idempotency
+
+Persistent trace storage
+
+Durable replay across restarts
+
+Phase 12 — Planner Evolution
+
+Planner v2 framework
+
+Version-based planner switching
+
+Plan regression comparison
+
+Phase 13 — External Tool Integrations
+
+HTTP-based tools
+
+LLM tool integrations
+
+Controlled retry logic
+
+Phase 14 — Distributed Scaling
+
+Multi-instance agent
+
+Shared idempotency store
+
+Horizontal executor scaling
+
+Phase 15 — Cancellation & Cooperative Stop
+
+Executor-side cancellation support
+
+Long-running task interruption
+
+🔒 Stability Policy
+
+Minor version bump:
+
+Internal improvements
+
+Performance optimization
+
+Non-breaking enhancements
+
+Major version bump:
+
+Planner logic changes
+
+Execution semantics change
+
+Governance rule changes
+
+📌 Version History
+v1.0.0
+
+Initial stable deterministic runtime:
+
+Plugin architecture
+
+Trace propagation
+
+Idempotency
+
+Timeout
+
+Plan versioning
+
+🏁 Final Result
+
+Your system is now:
+
+Clean
+
+Minimal
+
+Deterministic
+
+Hardened
+
+Versioned
+
+Replayable
+
+Production-structured
+
+No junk.
+No legacy config.
+No shadow registry.
+No dead files.

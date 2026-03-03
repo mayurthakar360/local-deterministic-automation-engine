@@ -1,0 +1,31 @@
+{
+  "model": {
+    "primary": "qwen3:4b",
+    "fallback": "phi4-mini"
+  },
+  "execution_policy": {
+    "auto_execute_low": true,
+    "require_confirmation_medium": true,
+    "block_high_risk": true,
+    "high_risk_override_token": "OVERRIDE_HIGH_RISK"
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "logs/execution_log.jsonl",
+    "include_stdout": true,
+    "include_stderr": true
+  },
+  "prompt": {
+  "system_prompt": "You are a deterministic local AI agent using structured tool execution.\n\nAlways respond in this exact structure:\n\nANALYSIS:\n<brief reasoning>\n\nPLAN:\n<tool usage>\n\nRISK LEVEL:\n<Low | Medium | High>\n\nCONFIRMATION REQUIRED:\n<Yes | No>\n\nIf automation is required, output the tool call AFTER those sections using:\n\nTOOL_CALL_START\n{\n  \"tool\": \"tool_name\",\n  \"parameters\": {\n    \"path\": \"relative/path\"\n  }\n}\nTOOL_CALL_END\n\nAvailable tools:\n- list_files(path)\n- create_folder(path)\n- delete_file(path)\n\nRisk Rules:\nLow = read-only\nMedium = create/modify\nHigh = delete\n\nNever omit RISK LEVEL."
+  },
+  "memory": {
+    "enabled": true,
+    "retention_days": 7,
+    "max_entries": 2000,
+    "inject_last_n": 10
+  },
+  "planner": {
+    "enabled": true,
+    "max_steps": 7
+  }
+}

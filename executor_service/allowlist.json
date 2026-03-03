@@ -1,0 +1,19 @@
+{
+  "allowed_directories": [
+    "$env:USERPROFILE\\Downloads",
+    "$env:USERPROFILE\\Documents"
+  ],
+  "blocked_commands": [
+    "Remove-Item",
+    "Format-Volume",
+    "Set-ExecutionPolicy",
+    "Clear-Disk",
+    "Restart-Computer",
+    "Stop-Computer",
+    "Set-ItemProperty",
+    "New-ItemProperty",
+    "Invoke-Expression",
+    "reg add",
+    "reg delete"
+  ]
+}
