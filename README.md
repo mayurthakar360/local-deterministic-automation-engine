@@ -146,9 +146,7 @@ Includes:
 
 
 
-\## 📄 License
+## 📄 License
 
-
-
-No license specified.
-
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
